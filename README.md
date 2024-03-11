@@ -19,7 +19,7 @@ Any folders (not including system folders or the script-generated folders) found
 
 ## Setup Instructions
 
-1. **Modify the Script Path**: Before running the script, make sure to update the `descargas_path` variable with the correct path to your Downloads folder. Replace `luisy` with your Windows username.
+1. **Modify the Script Path**: Before running the script, make sure to update the `descargas_path` variable with the correct path to your Downloads folder. Replace `YourUserName` with your Windows username.
 
     ```python
     descargas_path = 'C:\\Users\\YourUserName\\Downloads'
