@@ -6,12 +6,12 @@ This script is designed to help you keep your Downloads folder on Windows organi
 
 The script scans your Downloads folder and categorizes each file into pre-defined folders such as Images, Videos, Documents, Data, Music, Compressed files, Programming files, and Installation files. If a file does not match any of the predefined categories, it will be moved to an "Others" folder. Here's a brief overview of each category and the types of files they include:
 
-- **Images**: jpg, jpeg, png, gif, tiff, bmp, svg
+- **Images**: jpg, jpeg, png, gif, tiff, bmp, svg, webp
 - **Videos**: mp4, mov, avi, mkv, flv, wmv
 - **Documents**: pdf, doc, docx, xls, xlsx, ppt, pptx, txt, odt
-- **Data**: csv, json, xml, yaml
-- **Music**: mp3, wav, aac, flac
-- **Compressed**: zip, rar, 7z, tar, gz
+- **Data**: csv, json, xml, yaml, asd
+- **Music**: mp3, wav, aac, flac, mpeg
+- **Compressed**: zip, rar, 7z, tar, gz, torrent
 - **Programming**: py, java, cpp, js, html, css, sql
 - **Installation**: exe, msi, bat, sh
 
@@ -27,6 +27,29 @@ Any folders (not including system folders or the script-generated folders) found
 
 2. **Run the Script**: Execute the script using your favorite Python environment. This can be done from the command line, an IDE, or any Python execution method you prefer.
 
+## Automation
+
+To automatically run this script daily at 11:00 AM, follow these steps:
+
+1. **Create a Batch File**: Create a `.bat` file to run the script. For example, create a file named `run_script.bat` with the following content:
+
+    ```batch
+    @echo off
+    "C:\path\to\python.exe" "C:\path\to\your\script.py"
+    ```
+
+    Replace `C:\path\to\python.exe` with the path to your Python executable and `C:\path\to\your\script.py` with the path to your Python script.
+
+2. **Schedule the Task**:
+    - Open Task Scheduler by pressing `Win + R`, typing `taskschd.msc`, and pressing `Enter`.
+    - Click on "Create Basic Task..." in the right-hand pane.
+    - Follow the wizard to set the task name and description.
+    - Set the trigger to "Daily" and the start time to 11:00 AM.
+    - Set the action to "Start a program" and browse to select your `.bat` file.
+    - Complete the wizard and ensure the task is set to run even if the user is not logged in and with the highest privileges.
+
+3. **Test the Task**: Manually run the task from Task Scheduler to ensure it works correctly.
+
 ## Important Notes
 
 - Ensure you have Python installed on your Windows machine to run this script.
@@ -40,4 +63,3 @@ You can easily customize the script to fit your needs by adding or removing file
 ## Disclaimer
 
 This script moves files and folders automatically based on their extensions and names. While it's designed to organize your Downloads folder, the author is not responsible for any misplaced or incorrectly moved files. Always review the script's actions and adjust as necessary for your specific needs.
-
